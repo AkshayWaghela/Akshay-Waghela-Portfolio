@@ -1,923 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshay Waghela — Data Analyst</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akshay Waghela — portfolio in data analytics, statistics, machine learning, recommendation systems, and AI." />
+  <meta name="theme-color" content="#0b0d0f" />
+  <title>Akshay Waghela | Data Science & Analytics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0d0f;--panel:#121619;--panel2:#171c20;--text:#f1f4f2;--muted:#a1aaa7;--line:#29312f;--accent:#b7f36b;--accent2:#d9ffad}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:88px}body{font-family:Manrope,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,13,15,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-weight:800;letter-spacing:-.04em;font-size:1.02rem;white-space:nowrap}.brand span,h1 em{color:var(--accent)}nav{display:flex;gap:22px;align-items:center}nav a{color:var(--muted);font-size:.86rem}nav a:hover,nav a:focus{color:var(--accent)}.nav-cta{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.84rem}
+    .hero{padding:96px 0 82px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.eyebrow,.section-kicker,.card-label,.highlight-label{color:var(--accent);font:500 .74rem 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase}.eyebrow{margin-bottom:22px}h1{font-size:clamp(2.8rem,6vw,5.4rem);line-height:1.04;letter-spacing:-.065em;max-width:760px}h1 em{font-style:normal}.hero-copy{color:var(--muted);max-width:660px;margin-top:23px;font-size:1.02rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:7px;font-weight:800;font-size:.86rem;transition:transform .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--accent);color:#11160c}.btn-secondary{border:1px solid #3a4440}.hero-card{background:linear-gradient(145deg,#19201d,#101416);border:1px solid var(--line);padding:27px;border-radius:14px;position:relative;overflow:hidden}.signal{display:flex;align-items:center;gap:10px;margin:17px 0 23px;font-size:1.08rem;font-weight:800}.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px #b7f36b99}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini-stat{background:#ffffff08;border:1px solid #ffffff0f;padding:15px;border-radius:9px}.mini-stat strong{display:block;font-size:1.35rem}.mini-stat span{display:block;color:var(--muted);font-size:.75rem;margin-top:3px}
+    section{padding:74px 0;border-top:1px solid #ffffff12}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.section-kicker{margin-bottom:9px}h2{font-size:clamp(1.8rem,3.5vw,2.65rem);letter-spacing:-.055em;line-height:1.15}.section-intro{color:var(--muted);max-width:520px;font-size:.91rem}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px}.about-copy p{color:var(--muted);margin-bottom:15px}.skill-groups{display:grid;gap:13px}.skill-group{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:17px}.skill-group h3{font-size:.87rem;margin-bottom:11px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{font:400 .71rem 'DM Mono',monospace;border:1px solid #303a35;background:#171d19;color:#d7dfd9;padding:5px 8px;border-radius:5px}
+    .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project-card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:23px;min-width:0;transition:border-color .2s,transform .2s}.project-card:hover{border-color:#526744;transform:translateY(-2px)}.project-meta{display:flex;flex-wrap:wrap;margin-bottom:14px}.pill{font:500 .65rem 'DM Mono',monospace;color:var(--accent);border:1px solid #405432;background:#1a2515;padding:5px 8px;border-radius:4px}.project-card h3{font-size:1.22rem;line-height:1.3;letter-spacing:-.03em;margin-bottom:11px}.project-desc{color:var(--muted);font-size:.86rem;margin-bottom:17px}.project-card .tags{margin-bottom:18px}.project-highlight{padding:15px;background:#ffffff05;border:1px solid #ffffff0c;border-radius:8px;margin-bottom:14px}.highlight-label{font-size:.62rem}.project-highlight strong{display:block;color:var(--accent);font-size:1.08rem;margin:5px 0}.project-highlight p{color:var(--muted);font-size:.75rem}.project-card details{border-top:1px solid var(--line);padding-top:12px;margin-top:0;margin-bottom:15px}.project-card summary{cursor:pointer;font-size:.82rem;font-weight:800;color:#e3e9e5}.project-card details p{color:var(--muted);font-size:.8rem;margin-top:10px}.project-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:5px}.project-links a{font-size:.77rem;font-weight:800;color:var(--accent)}.project-links a:hover{text-decoration:underline}.small-note{font-size:.77rem;color:var(--muted);margin-top:18px}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.process{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}.process .num{color:var(--accent);font:500 .72rem 'DM Mono',monospace;margin-bottom:15px}.process h3{font-size:.9rem;margin-bottom:7px}.process p{color:var(--muted);font-size:.78rem}.contact-panel{display:flex;align-items:center;justify-content:space-between;gap:25px;background:var(--panel);border:1px solid var(--line);padding:29px;border-radius:12px}.contact-panel p{color:var(--muted);margin-top:9px;max-width:620px}footer{border-top:1px solid #ffffff12;padding:24px 0;color:var(--muted);font-size:.75rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 
-:root {
-  --ink:     #1a1a2e;
-  --ink-mid: #3d3d5c;
-  --ink-dim: #7b7b9a;
-  --rule:    #e4e4f0;
-  --bg:      #fafafa;
-  --white:   #ffffff;
-  --accent:  #2563eb;
-  --accent-light: #eff6ff;
-  --green:   #16a34a;
-  --green-light: #f0fdf4;
-  --amber:   #d97706;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.6;
-  font-size: 15px;
-}
-
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-  background: rgba(250,250,250,0.94);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--rule);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; height: 58px;
-}
-.nav-logo {
-  font-family: 'Fraunces', serif;
-  font-size: 18px; font-weight: 600; color: var(--ink);
-  text-decoration: none; letter-spacing: -0.01em;
-}
-.nav-links { display: flex; gap: 32px; list-style: none; }
-.nav-links a {
-  font-size: 13px; font-weight: 500; color: var(--ink-dim);
-  text-decoration: none; letter-spacing: 0.02em;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--accent); }
-.nav-cta {
-  background: var(--ink); color: white !important;
-  padding: 7px 18px; border-radius: 5px;
-  font-size: 13px !important; font-weight: 500 !important;
-  transition: background 0.2s !important;
-}
-.nav-cta:hover { background: var(--accent) !important; color: white !important; }
-
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: flex; align-items: center;
-  padding: 100px 48px 80px;
-  border-bottom: 1px solid var(--rule);
-}
-.hero-inner {
-  max-width: 780px; margin: 0 auto; width: 100%;
-}
-.hero-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; color: var(--accent);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 24px;
-  display: flex; align-items: center; gap: 10px;
-}
-.hero-label::before {
-  content: '';
-  display: inline-block; width: 28px; height: 1px;
-  background: var(--accent);
-}
-.hero-headline {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(42px, 7vw, 76px);
-  font-weight: 300; line-height: 1.08;
-  letter-spacing: -0.02em; color: var(--ink);
-  margin-bottom: 28px;
-}
-.hero-headline em {
-  font-style: italic; color: var(--accent);
-}
-.hero-sub {
-  font-size: 17px; color: var(--ink-mid);
-  line-height: 1.75; max-width: 560px;
-  margin-bottom: 40px; font-weight: 300;
-}
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 64px; }
-.btn {
-  padding: 11px 24px; border-radius: 5px;
-  font-size: 13px; font-weight: 600;
-  text-decoration: none; transition: all 0.2s;
-  display: inline-flex; align-items: center; gap: 6px;
-  letter-spacing: 0.01em;
-}
-.btn-dark { background: var(--ink); color: white; }
-.btn-dark:hover { background: var(--accent); }
-.btn-ghost { border: 1px solid var(--rule); color: var(--ink-mid); background: white; }
-.btn-ghost:hover { border-color: var(--ink-mid); color: var(--ink); }
-
-.hero-stats {
-  display: flex; gap: 48px; flex-wrap: wrap;
-  padding-top: 40px; border-top: 1px solid var(--rule);
-}
-.stat-item {}
-.stat-num {
-  font-family: 'Fraunces', serif;
-  font-size: 32px; font-weight: 600; color: var(--ink);
-  line-height: 1; margin-bottom: 4px;
-}
-.stat-num sup { font-size: 16px; color: var(--accent); }
-.stat-desc { font-size: 12px; color: var(--ink-dim); letter-spacing: 0.02em; }
-
-/* ── SECTIONS ── */
-section { padding: 96px 48px; border-bottom: 1px solid var(--rule); }
-.section-inner { max-width: 900px; margin: 0 auto; }
-.section-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--accent);
-  letter-spacing: 0.12em; text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.section-title {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 300; letter-spacing: -0.02em;
-  color: var(--ink); margin-bottom: 48px; line-height: 1.2;
-}
-
-/* ── ABOUT ── */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.about-text p {
-  color: var(--ink-mid); line-height: 1.8;
-  margin-bottom: 18px; font-weight: 300; font-size: 15px;
-}
-.about-text p strong { color: var(--ink); font-weight: 600; }
-.about-aside {}
-.aside-block { margin-bottom: 32px; }
-.aside-title {
-  font-size: 11px; font-weight: 600; color: var(--ink-dim);
-  text-transform: uppercase; letter-spacing: 0.08em;
-  margin-bottom: 12px;
-}
-.aside-item {
-  display: flex; justify-content: space-between;
-  padding: 10px 0; border-bottom: 1px solid var(--rule);
-  font-size: 13px;
-}
-.aside-item:last-child { border-bottom: none; }
-.aside-key { color: var(--ink-mid); }
-.aside-val { color: var(--ink); font-weight: 500; }
-.award-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 10px 0; border-bottom: 1px solid var(--rule);
-}
-.award-item:last-child { border-bottom: none; }
-.award-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-.award-text { font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
-.award-text strong { color: var(--ink); }
-
-/* ── SKILLS ── */
-.skills-bg { background: var(--white); }
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
-.skill-cell {
-  background: var(--white); padding: 28px 24px;
-}
-.skill-cell-title {
-  font-size: 11px; font-weight: 600; color: var(--ink-dim);
-  text-transform: uppercase; letter-spacing: 0.08em;
-  margin-bottom: 14px;
-}
-.skill-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.pill {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--ink-mid);
-  border: 1px solid var(--rule);
-  padding: 4px 10px; border-radius: 3px;
-  background: var(--bg);
-}
-.pill.strong { color: var(--accent); border-color: #bfdbfe; background: var(--accent-light); }
-
-/* ── PROJECTS ── */
-.projects-list { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
-.project-row {
-  background: var(--white); padding: 36px 32px;
-  display: grid; grid-template-columns: 48px 1fr auto;
-  gap: 24px; align-items: start;
-  transition: background 0.15s;
-  cursor: default;
-}
-.project-row:hover { background: #fafbff; }
-.project-num {
-  font-family: 'Fraunces', serif;
-  font-size: 28px; font-weight: 300; color: var(--rule);
-  line-height: 1; padding-top: 4px;
-}
-.project-content {}
-.project-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.project-name {
-  font-family: 'Fraunces', serif;
-  font-size: 20px; font-weight: 400; color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.project-badge {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; padding: 3px 8px; border-radius: 3px;
-}
-.badge-ai { background: #ede9fe; color: #6d28d9; }
-.badge-nlp { background: #fef3c7; color: #92400e; }
-.badge-dl { background: #fce7f3; color: #9d174d; }
-.badge-stat { background: #dcfce7; color: #166534; }
-.badge-ml { background: #dbeafe; color: #1e40af; }
-.project-desc { color: var(--ink-mid); font-size: 14px; line-height: 1.7; margin-bottom: 14px; font-weight: 300; }
-.project-outcome {
-  font-size: 13px; color: var(--green); font-weight: 500;
-  display: flex; align-items: center; gap: 6px; margin-bottom: 14px;
-}
-.project-outcome::before { content: '→'; }
-.project-stack { display: flex; flex-wrap: wrap; gap: 5px; }
-.stack-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--ink-dim);
-  border: 1px solid var(--rule); padding: 3px 7px; border-radius: 2px;
-}
-.project-links-col { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; padding-top: 6px; }
-.proj-link {
-  font-size: 12px; font-weight: 600; color: var(--accent);
-  text-decoration: none; white-space: nowrap;
-  padding: 5px 12px; border: 1px solid #bfdbfe;
-  border-radius: 3px; background: var(--accent-light);
-  transition: all 0.15s;
-}
-.proj-link:hover { background: var(--accent); color: white; border-color: var(--accent); }
-
-/* ── EXPERIENCE ── */
-.exp-bg { background: var(--white); }
-.exp-list { display: flex; flex-direction: column; gap: 0; }
-.exp-row {
-  display: grid; grid-template-columns: 200px 1fr;
-  gap: 40px; padding: 40px 0;
-  border-bottom: 1px solid var(--rule);
-}
-.exp-row:last-child { border-bottom: none; }
-.exp-left {}
-.exp-dates {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--ink-dim);
-  letter-spacing: 0.04em; margin-bottom: 6px;
-}
-.exp-company { font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
-.exp-loc { font-size: 12px; color: var(--ink-dim); }
-.exp-right {}
-.exp-title {
-  font-family: 'Fraunces', serif;
-  font-size: 20px; font-weight: 400; color: var(--ink);
-  margin-bottom: 16px; letter-spacing: -0.01em;
-}
-.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.exp-bullets li {
-  font-size: 14px; color: var(--ink-mid); line-height: 1.7;
-  padding-left: 18px; position: relative; font-weight: 300;
-}
-.exp-bullets li::before {
-  content: '—'; position: absolute; left: 0;
-  color: var(--rule); font-size: 14px;
-}
-.exp-bullets li strong { color: var(--ink); font-weight: 600; }
-
-/* ── CERTIFICATIONS ── */
-.cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
-.cert-card {
-  background: var(--white); padding: 24px 20px;
-  transition: background 0.15s;
-}
-.cert-card:hover { background: #fafbff; }
-.cert-org {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--accent);
-  margin-bottom: 8px;
-}
-.cert-name { font-size: 13px; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 6px; }
-.cert-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-dim); }
-
-/* ── CONTACT ── */
-.contact-bg { background: var(--ink); border-bottom: none; }
-.contact-bg .section-label { color: rgba(255,255,255,0.35); }
-.contact-bg .section-title { color: white; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.contact-intro { color: rgba(255,255,255,0.55); font-size: 16px; line-height: 1.75; font-weight: 300; margin-bottom: 32px; }
-.contact-detail { display: flex; flex-direction: column; gap: 16px; }
-.contact-item { display: flex; align-items: center; gap: 14px; }
-.contact-icon { font-size: 16px; }
-.contact-text { font-size: 14px; color: rgba(255,255,255,0.7); }
-.contact-text a { color: rgba(255,255,255,0.9); text-decoration: none; }
-.contact-text a:hover { color: white; }
-.social-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.social-card {
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 6px; padding: 18px 16px;
-  text-decoration: none; transition: all 0.2s;
-  display: flex; align-items: center; gap: 12px;
-}
-.social-card:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
-.social-icon { font-size: 20px; }
-.social-info {}
-.social-name { font-size: 13px; font-weight: 600; color: white; }
-.social-handle { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--ink); padding: 20px 48px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  display: flex; justify-content: space-between; align-items: center;
-}
-.footer-text { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.2); }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .hero { padding: 90px 20px 60px; }
-  section { padding: 64px 20px; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
-  .project-row { grid-template-columns: 1fr; gap: 16px; }
-  .project-num { display: none; }
-  .project-links-col { flex-direction: row; align-items: flex-start; }
-  .exp-row { grid-template-columns: 1fr; gap: 12px; }
-  .cert-grid { grid-template-columns: 1fr 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  footer { flex-direction: column; gap: 8px; text-align: center; }
-}
-</style>
+    .cert-summary{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:15px 17px;margin-bottom:17px;border:1px solid var(--line);background:var(--panel2);border-radius:9px}.cert-summary strong{color:var(--accent);font-size:.88rem}.cert-summary span{color:var(--muted);font-size:.78rem}.cert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.cert-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:17px;min-width:0}.cert-topline{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:11px}.cert-issuer{font:500 .68rem 'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}.cert-date{font-size:.68rem;color:var(--muted)}.cert-card h3{font-size:.9rem;line-height:1.4;margin-bottom:10px;letter-spacing:-.02em}.cert-skills{font-size:.75rem;color:var(--muted);line-height:1.6}.cert-id{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font:400 .65rem 'DM Mono',monospace;color:#c3cdc6;overflow-wrap:anywhere}
+    @media(max-width:850px){nav{gap:12px}nav a{font-size:.77rem}.hero{grid-template-columns:1fr;padding-top:68px;gap:32px}.hero-card{max-width:550px}.about-grid{grid-template-columns:1fr;gap:25px}.project-grid{grid-template-columns:1fr 1fr}.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:580px){.wrap{width:91%}.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.nav nav{width:100%;flex-wrap:wrap}.nav-cta{display:none}.hero{padding:58px 0}.project-grid,.cert-grid,.process-grid{grid-template-columns:1fr}.cert-summary{align-items:flex-start;flex-direction:column}section{padding:55px 0}.contact-panel{align-items:flex-start;flex-direction:column}.project-card{padding:19px}}
+  </style>
 </head>
 <body>
+<header><div class="wrap nav"><a class="brand" href="#home">AKSHAY<span>.</span>WAGHELA</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#approach">Approach</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="https://github.com/AkshayWaghela" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="nav-cta" href="https://medium.com/@AkshayWaghela" target="_blank" rel="noopener noreferrer">Medium ↗</a></div></header>
+<main id="home">
+  <div class="wrap hero"><div><div class="eyebrow">Data Science · Machine Learning · Analytics</div><h1>Turning data into <em>decisions.</em></h1><p class="hero-copy">I’m Akshay Waghela, a statistics-trained analyst interested in building practical data products—from exploratory analysis and statistical testing to predictive modelling, explainability, and interactive applications.</p><div class="actions"><a class="btn btn-primary" href="#projects">Explore my work ↓</a><a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a><a class="btn btn-secondary" href="resume.pdf" download="Akshay_Waghela_Resume.pdf">Download Resume ↓</a><a class="btn btn-secondary" href="https://github.com/AkshayWaghela" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a><a class="btn btn-secondary" href="https://medium.com/@AkshayWaghela" target="_blank" rel="noopener noreferrer">Medium articles ↗</a></div></div><aside class="hero-card"><div class="card-label">Portfolio overview</div><div class="signal"><span class="dot"></span> Statistics to applied data products</div><div class="mini-grid"><div class="mini-stat"><strong>10</strong><span>Projects showcased</span></div><div class="mini-stat"><strong>ML + SQL</strong><span>Modelling & analytics</span></div><div class="mini-stat"><strong>SHAP</strong><span>Model explainability</span></div><div class="mini-stat"><strong>Python</strong><span>Core analysis toolkit</span></div></div></aside></div>
+  <section id="about"><div class="wrap"><div class="section-head"><div><div class="section-kicker">01 / About</div><h2>Statistics first.<br>Impact always.</h2></div><p class="section-intro">A practical, evidence-led approach to solving analytical problems and communicating what the data can—and cannot—tell us.</p></div><div class="about-grid"><div class="about-copy"><p>My background in Statistics shapes how I approach data science: understand the data, validate assumptions, choose suitable evaluation methods, and communicate uncertainty clearly.</p><p>I work across data preparation, statistical analysis, machine learning, reporting, and workflow automation. I’m interested in projects where analytical rigour and usable delivery matter as much as the algorithm.</p><p>This portfolio highlights practical work and reports results with context rather than presenting metrics without explanation.</p></div><div class="skill-groups" id="skills"><div class="skill-group"><h3>Programming & data</h3><div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">PySpark</span></div></div><div class="skill-group"><h3>Machine learning & statistics</h3><div class="tags"><span class="tag">XGBoost</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">Regression</span><span class="tag">Classification</span><span class="tag">Calibration</span><span class="tag">SHAP</span><span class="tag">Statistical testing</span></div></div><div class="skill-group"><h3>Analytics & delivery</h3><div class="tags"><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Power BI</span><span class="tag">Looker Studio</span><span class="tag">GitHub</span><span class="tag">Data visualisation</span></div></div></div></div></div></section>
+  <section id="projects"><div class="wrap"><div class="section-head"><div><div class="section-kicker">02 / Projects</div><h2>Curiosity, tested<br>through practical work.</h2></div><p class="section-intro">Ten projects across machine learning, SQL analytics, health data, recommender systems, computer vision, and statistical research. Use the links on each card to find the repository or a demo/notebook.</p></div><div class="project-grid">
+      <article class="project-card" id="project-1">
+        <div class="project-meta"><span class="pill">MACHINE LEARNING · CREDIT RISK</span></div>
+        <h3>Credit Risk Scoring & Probability of Default Prediction</h3>
+        <p class="project-desc">An end-to-end credit-risk workflow using historical application data, engineered features, chronological validation, XGBoost, sigmoid calibration, risk bands, and SHAP explainability.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">XGBoost</span><span class="tag">scikit-learn</span><span class="tag">SHAP</span><span class="tag">Streamlit</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>ROC-AUC 0.706</strong><p>1.53M applications · 26 engineered features · Brier score 0.0204 · KS 0.3139</p></div>
+        <details><summary>Technical overview</summary><p>Used a July–October 2020 chronological holdout; applied probability calibration and reviewed risk across ten ordered bands. This is a historical prototype, not an approved lending decision system. Fairness, drift monitoring, leakage controls, and independent validation remain necessary.</p></details>
+        <div class="project-links"><a href="https://github.com/AkshayWaghela/Colab-Credit-Risk" target="_blank" rel="noopener noreferrer">Open GitHub repository ↗</a><a href="https://www.google.com/search?q=Credit%20Risk%20Scoring%20Probability%20of%20Default%20Prediction%20Akshay%20Waghela%20Streamlit%20demo" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-2">
+        <div class="project-meta"><span class="pill">DATA ANALYTICS · SQL · BI</span></div>
+        <h3>E-Commerce Sales & Customer Analytics</h3>
+        <p class="project-desc">A relational analytics project covering customers, products, orders, and order items. SQL analysis feeds an interactive dashboard for sales trends, estimated profitability, product performance, customer behaviour, and exploratory RFM segmentation.</p>
+        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">Streamlit</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>SQL → Dashboard</strong><p>4 relational entities · CTEs · Window functions · CSV export</p></div>
+        <details><summary>Technical overview</summary><p>Uses joins, aggregations, CTEs, window functions, reusable views, interactive filters, and downloadable analysis. The demonstration data is synthetic; revenue and profit values are illustrative rather than real company performance.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=E-Commerce%20Sales%20Customer%20Analytics%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=E-Commerce%20Sales%20Customer%20Analytics%20Akshay%20Waghela%20Streamlit%20dashboard" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-3">
+        <div class="project-meta"><span class="pill">HEALTH ANALYTICS · AI</span></div>
+        <h3>Health Analytics Chatbot</h3>
+        <p class="project-desc">A prototype that uses wearable-style health records to compare a user’s inputs with similar profiles and provide a health score and risk tier. Natural-language summaries are explored using locally hosted language models.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Nearest Neighbours</span><span class="tag">LLMs</span><span class="tag">Ollama</span><span class="tag">Hugging Face</span><span class="tag">Streamlit</span><span class="tag">Gradio</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>Personalised insights</strong><p>Heart rate · Sleep · Steps · HRV · SpO₂</p></div>
+        <details><summary>Technical overview</summary><p>Explores similarity-based matching against health profiles and parallel Streamlit and Colab/Gradio interfaces. Treat outputs as exploratory wellness insights, not medical advice or diagnosis.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Health%20Analytics%20Chatbot%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Health%20Analytics%20Chatbot%20Akshay%20Waghela%20Streamlit%20Gradio%20demo" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-4">
+        <div class="project-meta"><span class="pill">RECOMMENDER SYSTEMS</span></div>
+        <h3>Indian Movie Recommendation App</h3>
+        <p class="project-desc">A movie recommendation project designed to help users discover Indian films through movie metadata and similarity-based recommendations.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">Recommendation Systems</span><span class="tag">Streamlit</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>Content discovery</strong><p>Movie metadata · Similarity-based recommendations</p></div>
+        <details><summary>Technical overview</summary><p>The app-oriented workflow focuses on preparing movie data, selecting useful metadata, calculating similarity, and presenting recommendations through an accessible interface.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Indian%20Movie%20Recommendation%20App%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Indian%20Movie%20Recommendation%20App%20Akshay%20Waghela%20live%20demo" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-5">
+        <div class="project-meta"><span class="pill">MACHINE LEARNING · REGRESSION</span></div>
+        <h3>Medical Insurance Cost Predictor</h3>
+        <p class="project-desc">A regression project that estimates medical insurance expenses from demographic and lifestyle features, with an interactive what-if experience for exploring how inputs affect predictions.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Regression</span><span class="tag">Streamlit</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>Cost prediction</strong><p>1,338 insurance records · Feature preprocessing · What-if scenarios</p></div>
+        <details><summary>Technical overview</summary><p>The workflow includes encoding and scaling, target transformation experiments, neural-network regression, and an interactive interface. Predictions are estimates from a training dataset, not actual insurance quotes.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Medical%20Insurance%20Cost%20Predictor%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Medical%20Insurance%20Cost%20Predictor%20Akshay%20Waghela%20Streamlit%20app" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-6">
+        <div class="project-meta"><span class="pill">RECOMMENDER SYSTEMS</span></div>
+        <h3>Personalized Book Recommendation</h3>
+        <p class="project-desc">A book recommender built on the Book-Crossings dataset, using reader ratings and cosine similarity to suggest titles related to a selected favourite book.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">K-Nearest Neighbours</span><span class="tag">Cosine Similarity</span><span class="tag">Streamlit</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>Top-5 suggestions</strong><p>Book-Crossings · 1M+ ratings · ~270K books in source dataset</p></div>
+        <details><summary>Technical overview</summary><p>The project filters toward active readers and popular books, builds a similarity-based recommendation workflow, and presents a top-five recommendation list in an interactive app.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Personalized%20Book%20Recommendation%20Akshay%20Waghela%20Book%20Crossings&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Personalized%20Book%20Recommendation%20Akshay%20Waghela%20Streamlit" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-7">
+        <div class="project-meta"><span class="pill">REINFORCEMENT / STRATEGY</span></div>
+        <h3>Rock-Paper-Scissors AI Strategy Bot</h3>
+        <p class="project-desc">A strategy bot that analyses opponent move patterns and selects responses for a Rock-Paper-Scissors game, exploring how simple adaptive rules can improve decisions over repeated rounds.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pattern Analysis</span><span class="tag">Rule-based Strategy</span><span class="tag">Simulation</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>Adaptive strategy</strong><p>Sequential moves · Opponent patterns · Strategy evaluation</p></div>
+        <details><summary>Technical overview</summary><p>The project focuses on recognising repeated behaviour, translating observed patterns into move selection, and testing performance across game sequences.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Rock%20Paper%20Scissors%20AI%20Strategy%20Bot%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Rock%20Paper%20Scissors%20AI%20Strategy%20Bot%20Akshay%20Waghela%20demo" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-8">
+        <div class="project-meta"><span class="pill">DEEP LEARNING · COMPUTER VISION</span></div>
+        <h3>Cats vs. Dogs Image Classifier</h3>
+        <p class="project-desc">An image-classification project that trains a convolutional neural network to distinguish cat images from dog images.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">CNN</span><span class="tag">Image Classification</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>Binary image classification</strong><p>Image preprocessing · CNN training · Validation evaluation</p></div>
+        <details><summary>Technical overview</summary><p>The workflow covers preparing image inputs, training a CNN, evaluating validation performance, and using the trained model to classify unseen images.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Cats%20vs%20Dogs%20Image%20Classifier%20Akshay%20Waghela%20TensorFlow&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Cats%20vs%20Dogs%20Image%20Classifier%20Akshay%20Waghela%20demo" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-9">
+        <div class="project-meta"><span class="pill">STATISTICAL MODELLING · CIVIC ANALYTICS</span></div>
+        <h3>Voter Turnout Prediction — 2022 Elections</h3>
+        <p class="project-desc">A survey-based study of voting behaviour in Vadodara, combining a custom civic-awareness score, logistic regression, and visual analysis of citizen expectations.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Statistics</span><span class="tag">Logistic Regression</span><span class="tag">Survey Analysis</span><span class="tag">Data Visualisation</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>320 survey responses</strong><p>Survey-based analysis · Logistic regression · Likert charts</p></div>
+        <details><summary>Technical overview</summary><p>Explored demographic and behavioural associations with reported voting behaviour and visualised survey responses. Findings are specific to the collected sample and should not be generalised to all voters without further sampling and validation.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Voter%20Turnout%20Prediction%202022%20Elections%20Vadodara%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Voter%20Turnout%20Prediction%202022%20Elections%20Vadodara%20Akshay%20Waghela%20report" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+      <article class="project-card" id="project-10">
+        <div class="project-meta"><span class="pill">STATISTICS · RESEARCH</span></div>
+        <h3>Hospital Preference Study — Vadodara</h3>
+        <p class="project-desc">A survey-based research project exploring factors associated with choosing government versus private hospitals in Vadodara.</p>
+        <div class="tags"><span class="tag">Statistics</span><span class="tag">Chi-square Test</span><span class="tag">Z-test</span><span class="tag">Cochran’s Q</span><span class="tag">Logistic Regression</span><span class="tag">Survey Research</span></div>
+        <div class="project-highlight"><span class="highlight-label">PROJECT SNAPSHOT</span><strong>~300 responses</strong><p>Government vs. private hospitals · Satisfaction and choice factors</p></div>
+        <details><summary>Technical overview</summary><p>Applied chi-square tests, Z-tests, Cochran’s Q, and logistic regression to study hospital preferences. The reported satisfaction averages were 3.15/5 for government hospitals and 3.65/5 for private hospitals in the collected sample.</p></details>
+        <div class="project-links"><a href="https://github.com/search?q=Hospital%20Preference%20Study%20Vadodara%20Akshay%20Waghela&type=repositories" target="_blank" rel="noopener noreferrer">Find GitHub repository ↗</a><a href="https://www.google.com/search?q=Hospital%20Preference%20Study%20Vadodara%20Akshay%20Waghela%20report" target="_blank" rel="noopener noreferrer">Search demo / notebook ↗</a></div>
+      </article>
+  </div><p class="small-note">Link note: the Credit Risk repository URL is verified from the project details supplied. For projects without a confirmed repository or deployed URL, the buttons open a targeted search rather than claiming an unverified app is live. Replace those search links with direct repository and demo URLs when available. E-commerce figures are based on synthetic demonstration data.</p></div></section>
 
-<!-- NAV -->
-<nav>
-  <a href="#home" class="nav-logo">Akshay Waghela</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-label">Data Analyst — Mumbai, India</div>
-    <h1 class="hero-headline">
-      I turn messy data<br>into <em>decisions</em><br>that move businesses.
-    </h1>
-    <p class="hero-sub">
-      Python automation, statistical analysis, and BI dashboarding — across pharma, finance, and research. 2.5+ years of converting raw numbers into workflows that save hours and surface what actually matters.
-    </p>
-    <div class="hero-actions">
-      <a href="Akshay_W_DS.pdf" class="btn btn-dark" target="_blank">↓ Download Resume</a>
-      <a href="#projects" class="btn btn-ghost">View Projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+  <section id="certifications"><div class="wrap">
+    <div class="section-head"><div><div class="section-kicker">04 / Certifications</div><h2>Continuous learning.<br>Applied skills.</h2></div>
+      <p class="section-intro">A collection of certifications and job simulations across analytics, statistics, SQL, business intelligence, machine learning, data engineering, and generative AI.</p>
     </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">2.5<sup>+</sup></div>
-        <div class="stat-desc">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100K<sup>+</sup></div>
-        <div class="stat-desc">Records Processed Monthly</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">70<sup>%</sup></div>
-        <div class="stat-desc">Manual Effort Reduced</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">9</div>
-        <div class="stat-desc">Projects Built</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">87<sup>%</sup></div>
-        <div class="stat-desc">NLP Model Accuracy</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="section-label">About</div>
-    <h2 class="section-title">The person behind the data</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I'm a <strong>Data Analyst with 2.5+ years of experience</strong> and an M.Sc. in Statistics from The Maharaja Sayajirao University of Baroda. My work sits at the intersection of statistics, Python automation, and business intelligence — turning operational data into systems that actually save time and surface real insight.
-        </p>
-        <p>
-          At <strong>Pharmarack</strong>, I build end-to-end analytics pipelines that process 100,000+ pharma sales records monthly. Before that, at <strong>Arbour Alternate Advisors</strong>, I designed dashboards, automated reporting workflows, and built process-tracking systems used across 10+ departments.
-        </p>
-        <p>
-          Outside of work, I build projects in machine learning, NLP, deep learning, and recommendation systems — not to collect certificates, but because I genuinely enjoy figuring out how models learn and where they fail.
-        </p>
-        <p>
-          I'm currently <strong>open to Data Analyst and Junior Data Scientist roles</strong> where statistical thinking and Python automation can drive real business outcomes.
-        </p>
-      </div>
-      <div class="about-aside">
-        <div class="aside-block">
-          <div class="aside-title">Quick Facts</div>
-          <div class="aside-item"><span class="aside-key">Location</span><span class="aside-val">Mumbai, India</span></div>
-          <div class="aside-item"><span class="aside-key">Education</span><span class="aside-val">M.Sc. Statistics</span></div>
-          <div class="aside-item"><span class="aside-key">University</span><span class="aside-val">MSU Baroda</span></div>
-          <div class="aside-item"><span class="aside-key">B.Sc. CGPA</span><span class="aside-val">9.86 / 10</span></div>
-          <div class="aside-item"><span class="aside-key">Experience</span><span class="aside-val">2.5+ years</span></div>
-          <div class="aside-item"><span class="aside-key">Open to</span><span class="aside-val">DA / Jr. DS Roles</span></div>
-        </div>
-        <div class="aside-block">
-          <div class="aside-title">Recognition</div>
-          <div class="award-item">
-            <div class="award-icon">🏆</div>
-            <div class="award-text"><strong>INSPIRE Scholarship</strong> — Top 1% in State HSC, Government of India</div>
-          </div>
-          <div class="award-item">
-            <div class="award-icon">🥇</div>
-            <div class="award-text"><strong>HackerRank Gold Badges</strong> — SQL & Python</div>
-          </div>
-          <div class="award-item">
-            <div class="award-icon">🥈</div>
-            <div class="award-text"><strong>2nd Rank, B.Sc. Statistics</strong> — Department of Statistics, Bhavan's College</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills-bg" id="skills">
-  <div class="section-inner">
-    <div class="section-label">Skills</div>
-    <h2 class="section-title">What I work with</h2>
-    <div class="skills-grid">
-      <div class="skill-cell">
-        <div class="skill-cell-title">Languages</div>
-        <div class="skill-pills">
-          <span class="pill strong">Python</span>
-          <span class="pill strong">SQL</span>
-          <span class="pill">R</span>
-          <span class="pill">Google Apps Script</span>
-          <span class="pill">Excel (Advanced)</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-title">Data & Automation</div>
-        <div class="skill-pills">
-          <span class="pill strong">Pandas</span>
-          <span class="pill strong">NumPy</span>
-          <span class="pill strong">OpenPyXL</span>
-          <span class="pill">Data Cleaning</span>
-          <span class="pill">ETL Pipelines</span>
-          <span class="pill">Data Validation</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-title">BI & Visualization</div>
-        <div class="skill-pills">
-          <span class="pill strong">Power BI</span>
-          <span class="pill strong">Looker Studio</span>
-          <span class="pill">Tableau</span>
-          <span class="pill">Matplotlib</span>
-          <span class="pill">Streamlit</span>
-          <span class="pill">Seaborn</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-title">Machine Learning</div>
-        <div class="skill-pills">
-          <span class="pill strong">Scikit-learn</span>
-          <span class="pill">TensorFlow</span>
-          <span class="pill">Keras</span>
-          <span class="pill">Regression</span>
-          <span class="pill">Classification</span>
-          <span class="pill">CNNs</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-title">Statistics</div>
-        <div class="skill-pills">
-          <span class="pill strong">Hypothesis Testing</span>
-          <span class="pill">ANOVA</span>
-          <span class="pill">Chi-square</span>
-          <span class="pill">Logistic Regression</span>
-          <span class="pill">A/B Testing</span>
-          <span class="pill">Statistical Modeling</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-title">Practices</div>
-        <div class="skill-pills">
-          <span class="pill strong">Data Governance</span>
-          <span class="pill">Data Quality Assurance</span>
-          <span class="pill">Agile</span>
-          <span class="pill">People Analytics</span>
-          <span class="pill">KPI Reporting</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-inner">
-    <div class="section-label">Projects</div>
-    <h2 class="section-title">Things I've built</h2>
-    <div class="projects-list">
-
-      <!-- 1 -->
-      <div class="project-row">
-        <div class="project-num">01</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Health Analytics Chatbot</div>
-            <span class="project-badge badge-ai">AI · In Progress</span>
-          </div>
-          <p class="project-desc">Exploring how to turn a wearable health dataset (2,000+ user records — heart rate, sleep, steps, HRV, SpO2) into a personalized health analytics chatbot. Building a nearest-neighbor similarity engine that matches a user's health inputs against existing profiles to estimate health score and risk tier. Testing locally-hosted LLMs (Ollama / HuggingFace) for natural-language summarization — completely free, no paid APIs. Two interfaces in parallel: Streamlit app and Google Colab + Gradio prototype.</p>
-          <div class="project-outcome">Personalized health risk estimation with natural language output — end-to-end free pipeline</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">FAISS</span><span class="stack-tag">Sentence-Transformers</span><span class="stack-tag">Ollama</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Gradio</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="project-row">
-        <div class="project-num">02</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Indian Movie Recommendation App</div>
-            <span class="project-badge badge-ml">ML · Deployed</span>
-          </div>
-          <p class="project-desc">Personalized recommender for Indian films using IMDb data. Cleaned and structured thousands of films, extracted genres and cast/crew via TF-IDF, and scaled features like year, duration, and ratings into a content-based similarity model that adapts to your personal rating. The app explains why each film was recommended — same director, similar genre, or high IMDb score.</p>
-          <div class="project-outcome">Top-5 picks with explainable reasoning — transparent and personalized discovery</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">TF-IDF</span><span class="stack-tag">NumPy</span><span class="stack-tag">Streamlit</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-          <a href="#" class="proj-link" target="_blank">Live App</a>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="project-row">
-        <div class="project-num">03</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Tweet Sentiment Analysis</div>
-            <span class="project-badge badge-nlp">NLP · Complete</span>
-          </div>
-          <p class="project-desc">End-to-end NLP pipeline for classifying sentiment across 30,000+ real-world tweets. Applied text preprocessing (tokenization, stopword removal, lemmatization, emoji and slang handling), TF-IDF vectorization, and trained ML classifiers to predict positive, negative, and neutral sentiment on noisy social media data.</p>
-          <div class="project-outcome">87% classification accuracy on 30,000+ real-world tweets</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">NLTK</span><span class="stack-tag">spaCy</span><span class="stack-tag">TF-IDF</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Pandas</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="project-row">
-        <div class="project-num">04</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Medical Insurance Cost Predictor</div>
-            <span class="project-badge badge-dl">Deep Learning · Deployed</span>
-          </div>
-          <p class="project-desc">Deep learning regression model predicting patient medical expenses from demographics and lifestyle factors. Analyzed 1,338 insurance records, applied preprocessing (scaling, encoding, log-transform), and built a TensorFlow/Keras model. Wrapped into an interactive Streamlit app with "what if" scenarios — shows how quitting smoking or changing BMI shifts predicted costs in real time.</p>
-          <div class="project-outcome">MAE &lt; 3500 — interactive what-if explorer for insurers and patients</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">TensorFlow</span><span class="stack-tag">Keras</span><span class="stack-tag">Pandas</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Streamlit</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-          <a href="#" class="proj-link" target="_blank">Live App</a>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="project-row">
-        <div class="project-num">05</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Personalized Book Recommendation</div>
-            <span class="project-badge badge-ml">ML · Deployed</span>
-          </div>
-          <p class="project-desc">Built on the Book-Crossings dataset (1M+ ratings, ~270K books). Cleaned data to focus on active readers and popular titles, trained a K-Nearest Neighbors model using cosine similarity to find books most similar to a chosen favorite, and wrapped it into an interactive Streamlit app for instant top-5 recommendations.</p>
-          <div class="project-outcome">Top-5 similar titles for any book — stronger reader engagement and discovery</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">KNN</span><span class="stack-tag">Streamlit</span><span class="stack-tag">NumPy</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-          <a href="#" class="proj-link" target="_blank">Live App</a>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="project-row">
-        <div class="project-num">06</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Rock-Paper-Scissors AI Strategy Bot</div>
-            <span class="project-badge badge-ml">ML · Complete</span>
-          </div>
-          <p class="project-desc">Behind this playful game lies a serious skill: predicting sequences. Built 5 bots (random guessers, pattern-followers, frequency trackers) and a custom 6-step Markov Chain bot that predicts the opponent's next move. Simulated thousands of rounds measuring win rates, streaks, and confidence intervals, then built an interactive dashboard to experiment with strategies in real time.</p>
-          <div class="project-outcome">60%+ win rate against strategy-based bots — clear opponent patterns identified</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">NumPy</span><span class="stack-tag">Pandas</span><span class="stack-tag">Markov Chain</span><span class="stack-tag">ipywidgets</span><span class="stack-tag">Scipy</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <!-- 7 -->
-      <div class="project-row">
-        <div class="project-num">07</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Cats vs. Dogs Image Classifier</div>
-            <span class="project-badge badge-dl">Deep Learning · Complete</span>
-          </div>
-          <p class="project-desc">CNN trained from scratch on 3,050 images using TensorFlow/Keras. Applied data augmentation (rotations, flips, zooms) to prevent overfitting on a small dataset. Trained over 15 epochs monitoring accuracy and loss curves, then built confidence-score visualizations to make predictions human-readable.</p>
-          <div class="project-outcome">72% test accuracy — well above 63% baseline — augmentation was the key</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">TensorFlow</span><span class="stack-tag">Keras</span><span class="stack-tag">CNN</span><span class="stack-tag">NumPy</span><span class="stack-tag">Matplotlib</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <!-- 8 -->
-      <div class="project-row">
-        <div class="project-num">08</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Voter Turnout Prediction — 2022 Elections</div>
-            <span class="project-badge badge-stat">Statistics · Academic</span>
-          </div>
-          <p class="project-desc">Collected 320 real survey responses on voting behavior in Vadodara. Designed a custom civic awareness score metric, applied logistic regression to predict voter turnout, and visualized findings with stacked Likert charts and a word cloud of citizen expectations. Found income, profession, and religion as key predictors — gender and education surprisingly did not matter.</p>
-          <div class="project-outcome">Actionable insights for NGOs, policy makers, and election awareness bodies</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">R</span><span class="stack-tag">Logistic Regression</span><span class="stack-tag">Survey Analysis</span><span class="stack-tag">Matplotlib</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <!-- 9 -->
-      <div class="project-row">
-        <div class="project-num">09</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <div class="project-name">Hospital Preference Study — Vadodara</div>
-            <span class="project-badge badge-stat">Statistics · Academic</span>
-          </div>
-          <p class="project-desc">Team research project analyzing healthcare preferences in Vadodara. Collected ~300 survey responses, applied Chi-square tests, Z-tests, Cochran's Q, and logistic regression to identify what drives people to choose government vs. private hospitals. Found a clear satisfaction gap (Govt 3.15/5 vs Private 3.65/5), with doctor recommendations, insurance, and prior experience as the strongest predictors.</p>
-          <div class="project-outcome">Private preferred for quality, government for cost — insurance and doctor advice are the deciding factors</div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">R</span><span class="stack-tag">SPSS</span><span class="stack-tag">Chi-square</span><span class="stack-tag">Logistic Regression</span><span class="stack-tag">Excel</span>
-          </div>
-        </div>
-        <div class="project-links-col">
-          <a href="https://github.com/akshaywaghela" class="proj-link" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="exp-bg" id="experience">
-  <div class="section-inner">
-    <div class="section-label">Experience</div>
-    <h2 class="section-title">Where I've worked</h2>
-    <div class="exp-list">
-
-      <div class="exp-row">
-        <div class="exp-left">
-          <div class="exp-dates">Feb 2026 — Present</div>
-          <div class="exp-company">Pharmarack</div>
-          <div class="exp-loc">Mumbai, India</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-title">Research Analyst</div>
-          <ul class="exp-bullets">
-            <li>Automated <strong>10+ business-critical reporting workflows</strong> using Python (Pandas, NumPy, OpenPyXL), reducing manual effort by <strong>70–90%</strong>.</li>
-            <li>Developed sales data consolidation pipelines processing <strong>100,000+ transaction records</strong> monthly — report preparation time cut from hours to minutes.</li>
-            <li>Built SKU analytics frameworks tracking <strong>MAT Growth, MoM Growth, Contribution %, Brand & Company Performance</strong> across thousands of SKUs.</li>
-            <li>Designed state-level target allocation models using historical sales share analysis — <strong>100% automated distribution</strong>, eliminating manual exercises.</li>
-            <li>Automated market share and contribution reporting across PT, MP, Brand, Product, and Geography hierarchies — <strong>turnaround reduced by 80%+</strong>.</li>
-            <li>Resolved client queries and validation issues on published audit reports by investigating data discrepancies and communicating findings to teams.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-left">
-          <div class="exp-dates">Dec 2025 — Feb 2026</div>
-          <div class="exp-company">Axis My India</div>
-          <div class="exp-loc">Mumbai, India</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-title">Data Analyst</div>
-          <ul class="exp-bullets">
-            <li>Analyzed <strong>200,000+ survey records</strong> using statistical techniques to uncover patterns in government scheme adoption and beneficiary overlap.</li>
-            <li>Evaluated program effectiveness across demographic segments and generated actionable insights for outreach strategy improvement.</li>
-            <li>Delivered data-driven targeting recommendations to improve scheme penetration and reduce resource wastage.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-left">
-          <div class="exp-dates">Apr 2025 — Nov 2025</div>
-          <div class="exp-company">Arbour Alternate Advisors</div>
-          <div class="exp-loc">Mumbai, India</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-title">MIS Data Analyst</div>
-          <ul class="exp-bullets">
-            <li>Built <strong>10+ interactive Looker Studio dashboards</strong> monitoring KPIs across HR, recruitment, and finance — used directly by leadership for decisions.</li>
-            <li>Automated data pipelines using Google Apps Script and SQL, improving data accuracy by <strong>20%</strong> and eliminating manual reporting errors.</li>
-            <li>Conducted EDA to identify process inefficiencies across HR and Finance, presenting optimization recommendations to stakeholders.</li>
-            <li>Translated business KPIs into real-time data metrics in an agile environment, enabling cross-functional teams to track and respond proactively.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-left">
-          <div class="exp-dates">Sep 2023 — Mar 2025</div>
-          <div class="exp-company">Arbour Alternate Advisors</div>
-          <div class="exp-loc">Mumbai, India</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-title">MIS Executive</div>
-          <ul class="exp-bullets">
-            <li>Designed workflow automation systems cutting operational processing time by <strong>30%</strong> across multiple departments.</li>
-            <li>Built a web-based investor onboarding application — reduced onboarding time by <strong>15%</strong> and data retrieval time by <strong>35%</strong>.</li>
-            <li>Implemented <strong>40+ real-time process trackers</strong> with bottleneck summaries, giving management instant operational visibility.</li>
-            <li>Engineered automated task reminder and submission system across <strong>10+ departments</strong>, reducing delays by 20%.</li>
-            <li>Streamlined reimbursement and approval cycles by <strong>30% and 25%</strong> respectively through data-driven process redesign.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-left">
-          <div class="exp-dates">Apr 2021 — May 2021</div>
-          <div class="exp-company">The Sparks Foundation</div>
-          <div class="exp-loc">Remote</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-title">Data Analyst Intern</div>
-          <ul class="exp-bullets">
-            <li>Built and evaluated ML classification models in Python achieving <strong>80%+ accuracy</strong> — full pipeline from EDA to model evaluation.</li>
-            <li>Performed exploratory data analysis using Pandas and Matplotlib to surface insights and improve data quality.</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="section-inner">
-    <div class="section-label">Certifications</div>
-    <h2 class="section-title">Credentials & training</h2>
+    <div class="cert-summary"><strong>30 certifications & simulations</strong><span>Listed by issue date, with credential IDs included where provided.</span></div>
     <div class="cert-grid">
-      <div class="cert-card">
-        <div class="cert-org">LinkedIn Learning</div>
-        <div class="cert-name">People Analytics</div>
-        <div class="cert-date">Jul 2026</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">Deloitte · Forage</div>
-        <div class="cert-name">Data Analytics Job Simulation</div>
-        <div class="cert-date">Jul 2026</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">BCG · Forage</div>
-        <div class="cert-name">Data Science Job Simulation</div>
-        <div class="cert-date">2025</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">Accenture · Forage</div>
-        <div class="cert-name">Data Analytics & Visualization</div>
-        <div class="cert-date">2025</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">freeCodeCamp</div>
-        <div class="cert-name">Data Analysis with Python</div>
-        <div class="cert-date">Mar 2025</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">TCS</div>
-        <div class="cert-name">iON Career Edge: Young Professional</div>
-        <div class="cert-date">Nov 2024</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">Udemy</div>
-        <div class="cert-name">Data Science & Machine Learning</div>
-        <div class="cert-date">2022 – 2023</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-org">upGrad</div>
-        <div class="cert-name">Case Study of Data Analysis</div>
-        <div class="cert-date">Jun 2023</div>
-      </div>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Oct 2026</span></div>
+        <h3>Advanced LLMs with Retrieval Augmented Generation (RAG): Practical Projects for AI Applications</h3>
+        <p class="cert-skills">Large Language Models (LLM) · Artificial Intelligence</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Oct 2026</span></div>
+        <h3>PySpark Essential Training: Introduction to Building Data Pipelines</h3>
+        <p class="cert-skills">PySpark · Data Engineering</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Sep 2026</span></div>
+        <h3>Practical Python for Time Series Analysis</h3>
+        <p class="cert-skills">Time Series Analysis · Data Analytics</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Aug 2026</span></div>
+        <h3>Advanced Power BI: DAX Language, Formulas, and Calculations</h3>
+        <p class="cert-skills">Power BI · DAX · Data Analytics</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Aug 2026</span></div>
+        <h3>Machine Learning and AI Foundations: Decision Trees with SPSS</h3>
+        <p class="cert-skills">Machine Learning · Artificial Intelligence</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Aug 2026</span></div>
+        <h3>Using AI for Data-Driven Insights</h3>
+        <p class="cert-skills">AI for Business</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Aug 2026</span></div>
+        <h3>Practical LLMs for Modern Data Science</h3>
+        <p class="cert-skills">Large Language Models · Data Analysis</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Jul 2026</span></div>
+        <h3>Generative AI: Introduction to Large Language Models</h3>
+        <p class="cert-skills">Generative AI · Large Language Models</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Jul 2026</span></div>
+        <h3>Data Analysis: Investigate with SQL</h3>
+        <p class="cert-skills">SQL · Data Analysis</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Jul 2026</span></div>
+        <h3>MLOps Essentials: Model Development and Integration</h3>
+        <p class="cert-skills">MLOps · Artificial Intelligence</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Jul 2026</span></div>
+        <h3>Power BI: Dashboards</h3>
+        <p class="cert-skills">Power BI · Dashboards</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Forage</span><span class="cert-date">Issued Jul 2026</span></div>
+        <h3>Deloitte — Data Analytics Job Simulation</h3>
+        <p class="cert-skills">Data Analytics</p>
+        <p class="cert-id">Credential ID: hzBq7rPE7mLKK9jYz</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Jul 2026</span></div>
+        <h3>People Analytics</h3>
+        <p class="cert-skills">People Analytics · HR Analytics · KPI Tracking · Data-driven Decision Making</p>
+        <p class="cert-id">Credential ID: 109456e6a6da741122bf1b4c844687cd87282877c703390e9c7b969958338bd8</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">upGrad</span><span class="cert-date">Issued May 2026</span></div>
+        <h3>Advanced SQL: Programming Constructs & Stored Functions</h3>
+        <p class="cert-skills">SQL · PL/SQL</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Forage</span><span class="cert-date">Issued Sep 2025</span></div>
+        <h3>BCG — Data Science Job Simulation</h3>
+        <p class="cert-skills">Data Science</p>
+        <p class="cert-id">Credential ID: DCTGvjaNjM9pp65yw</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">freeCodeCamp</span><span class="cert-date">Issued Mar 2025</span></div>
+        <h3>Data Analysis with Python</h3>
+        <p class="cert-skills">Python · Data Analytics</p>
+        <p class="cert-id">Credential ID: fcc503f4904-116b-4acb-b711-6b0481a4230a-dawp</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Forage</span><span class="cert-date">Issued Mar 2025</span></div>
+        <h3>Tata Group — Data Visualisation: Empowering Business with Effective Insights</h3>
+        <p class="cert-skills">Power BI · Business Intelligence</p>
+        <p class="cert-id">Credential ID: ECTDh3nZGNxApSi8n</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Forage</span><span class="cert-date">Issued Dec 2024</span></div>
+        <h3>Accenture — Data Analytics and Visualization Job Simulation</h3>
+        <p class="cert-skills">Analytics · Data Analysis</p>
+        <p class="cert-id">Credential ID: FvP5QHSarAhD4r6BR</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">SkillCourse</span><span class="cert-date">Issued Nov 2024</span></div>
+        <h3>Power BI Micro Course</h3>
+        <p class="cert-skills">Power BI · Relational Data Modeling</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">TCS iON Training Centre</span><span class="cert-date">Issued Nov 2023</span></div>
+        <h3>TCS iON Career Edge — Young Professional</h3>
+        <p class="cert-skills">Communication · Presentation · Corporate Etiquette</p>
+        <p class="cert-id">Credential ID: 119854-19993685-1016</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">upGrad</span><span class="cert-date">Issued Jun 2023</span></div>
+        <h3>Case Study of Data Analysis</h3>
+        <p class="cert-skills">Pandas · Data Interpretation</p>
+        <p class="cert-id">Credential ID: 3a2ac68e-4218-4176-95ee-fbb1e8eda393</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Cognitive Class</span><span class="cert-date">Issued Dec 2022</span></div>
+        <h3>Data Analysis with Python</h3>
+        <p class="cert-skills">Python · NumPy · Data Visualisation</p>
+        <p class="cert-id">Credential ID: c348647433af4d85b091b7690e1c4e21</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">upGrad</span><span class="cert-date">Issued Jan 2023</span></div>
+        <h3>Introduction to Tableau</h3>
+        <p class="cert-skills">Tableau · Data Visualisation</p>
+        <p class="cert-id">Credential ID: 226250e9-74c3-4a2c-be4a-b6f022085abf</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Udemy</span><span class="cert-date">Issued Jan 2023</span></div>
+        <h3>Data Science and Machine Learning</h3>
+        <p class="cert-skills">Data Science · Machine Learning</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">LinkedIn</span><span class="cert-date">Issued Aug 2021</span></div>
+        <h3>Excel Statistics Essential Training: 1</h3>
+        <p class="cert-skills">Statistics · Statistical Concepts</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">upGrad</span><span class="cert-date">Issued Oct 2021</span></div>
+        <h3>Exploratory Data Analysis in Excel</h3>
+        <p class="cert-skills">Data Analytics · Exploratory Data Analysis</p>
+        <p class="cert-id">Credential ID: 40069325</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">upGrad</span><span class="cert-date">Issued Jun 2021</span></div>
+        <h3>Analyzing and Visualizing Data with Microsoft Excel</h3>
+        <p class="cert-skills">Excel · Data Visualisation</p>
+        <p class="cert-id">Credential ID: 33748481</p>
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Great Learning</span><span class="cert-date">Issued Sep 2021</span></div>
+        <h3>Analyzing and Visualizing Data with Python</h3>
+        <p class="cert-skills">Python · Data Visualisation</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">Great Learning</span><span class="cert-date">Issued Sep 2021</span></div>
+        <h3>Python for Data Analysis</h3>
+        <p class="cert-skills">Python · Pandas · Data Analytics</p>
+        
+      </article>
+      <article class="cert-card">
+        <div class="cert-topline"><span class="cert-issuer">FinStat</span><span class="cert-date">Issued Apr 2019</span></div>
+        <h3>Analytics Using Spread Sheet</h3>
+        <p class="cert-skills">Spreadsheet Analytics · Data Interpretation</p>
+        
+      </article>
     </div>
-  </div>
-</section>
+    <p class="small-note">Credential URLs were not included in the supplied list, so this section shows the certification names, issuers, issue dates, skills, and available credential IDs without inventing verification links. Add each provider’s “Show credential” URL when available.</p>
+  </div></section>
 
-<!-- CONTACT -->
-<section class="contact-bg" id="contact">
-  <div class="section-inner">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Let's talk</h2>
-    <div class="contact-grid">
-      <div>
-        <p class="contact-intro">
-          I'm currently open to Data Analyst and Junior Data Scientist roles in Mumbai and remote. If you have an opening, a referral, or just want to connect — reach out directly.
-        </p>
-        <div class="contact-detail">
-          <div class="contact-item">
-            <span class="contact-icon">✉️</span>
-            <span class="contact-text"><a href="mailto:akshaywaghela1111@gmail.com">akshaywaghela1111@gmail.com</a></span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span class="contact-text">Mumbai, Maharashtra, India</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📄</span>
-            <span class="contact-text"><a href="Akshay_W_DS.pdf" target="_blank">Download Resume (PDF)</a></span>
-          </div>
-        </div>
-      </div>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/akshay-waghela" class="social-card" target="_blank">
-          <span class="social-icon">💼</span>
-          <div class="social-info">
-            <div class="social-name">LinkedIn</div>
-            <div class="social-handle">akshaywaghela</div>
-          </div>
-        </a>
-        <a href="https://github.com/akshaywaghela" class="social-card" target="_blank">
-          <span class="social-icon">⚡</span>
-          <div class="social-info">
-            <div class="social-name">GitHub</div>
-            <div class="social-handle">akshaywaghela</div>
-          </div>
-        </a>
-        <a href="https://www.hackerrank.com/profile/782akshay" class="social-card" target="_blank">
-          <span class="social-icon">🏅</span>
-          <div class="social-info">
-            <div class="social-name">HackerRank</div>
-            <div class="social-handle">Gold — SQL & Python</div>
-          </div>
-        </a>
-        <a href="https://medium.com/@AkshayWaghela" class="social-card" target="_blank">
-          <span class="social-icon">✍️</span>
-          <div class="social-info">
-            <div class="social-name">Medium</div>
-            <div class="social-handle">akshaywaghela</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <span class="footer-text">akshay waghela · data analyst · mumbai</span>
-  <span class="footer-text">open to opportunities · 2026</span>
-</footer>
-
-</body>
-</html>
+  <section id="approach"><div class="wrap"><div class="section-head"><div><div class="section-kicker">05 / How I work</div><h2>From raw data<br>to a defensible result.</h2></div><p class="section-intro">A repeatable workflow helps make analysis easier to review, reproduce, and improve.</p></div><div class="process-grid"><div class="process"><div class="num">STEP 01</div><h3>Frame the problem</h3><p>Define the decision, target variable, constraints, and success criteria.</p></div><div class="process"><div class="num">STEP 02</div><h3>Prepare the data</h3><p>Audit data quality, explore distributions, engineer features, and check leakage.</p></div><div class="process"><div class="num">STEP 03</div><h3>Validate the analysis</h3><p>Choose suitable splits and metrics; assess assumptions, calibration, and robustness.</p></div><div class="process"><div class="num">STEP 04</div><h3>Explain & deliver</h3><p>Communicate limitations, interpret results, and package useful outputs.</p></div></div></div></section>
+  <section id="contact"><div class="wrap"><div class="contact-panel"><div><div class="section-kicker">06 / Contact</div><h2>Let’s talk data.</h2><p>Open to conversations about data science, analytics, statistical modelling, and opportunities where careful analysis can create measurable value. Reach me directly by phone, text, or email.</p><p style="margin-top:14px;color:var(--text)"><strong>Phone:</strong> <a href="tel:+917400124094">+91 74001 24094</a><br><strong>Email:</strong> <a href="mailto:akshaywaghela1111@gmail.com">akshaywaghela1111@gmail.com</a></p><div class="actions"><a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a><a class="btn btn-secondary" href="resume.pdf" download="Akshay_Waghela_Resume.pdf">Download Resume ↓</a></div></div><div class="actions" style="margin-top:0"><a class="btn btn-primary" href="tel:+917400124094">Call me</a><a class="btn btn-secondary" href="sms:+917400124094">Text me</a><a class="btn btn-secondary" href="mailto:akshaywaghela1111@gmail.com?subject=Professional%20Opportunity">Email me</a><a class="btn btn-secondary" href="https://github.com/AkshayWaghela" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn btn-secondary" href="https://medium.com/@AkshayWaghela" target="_blank" rel="noopener noreferrer">Medium ↗</a></div></div></div></section>
+</main><footer><div class="wrap footer-row"><span>© 2026 Akshay Waghela · Data Science & Analytics Portfolio</span><span>Built with HTML & CSS · GitHub Pages compatible</span></div></footer>
+</body></html>
